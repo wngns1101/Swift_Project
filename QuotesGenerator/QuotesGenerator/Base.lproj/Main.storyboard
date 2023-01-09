@@ -26,63 +26,69 @@
                                 <rect key="frame" x="24" y="128" width="345" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g37-WK-ev5">
-                                        <rect key="frame" x="20" y="20" width="305" height="130"/>
+                                        <rect key="frame" x="20" y="20" width="305" height="140"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrs-g9-OWw">
-                                        <rect key="frame" x="20" y="170" width="305" height="10"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="X93-WS-HN5"/>
-                                            <constraint firstAttribute="height" constant="10" id="miY-Ls-tSB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRi-B0-VP3">
+                                        <rect key="frame" x="20" y="180" width="305" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Xrs-g9-OWw" secondAttribute="bottom" constant="20" id="1SK-jd-xXP"/>
                                     <constraint firstItem="g37-WK-ev5" firstAttribute="top" secondItem="IMA-98-C8g" secondAttribute="top" constant="20" id="2oE-Co-BMZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="Xrs-g9-OWw" secondAttribute="trailing" constant="20" id="NI4-IU-son"/>
+                                    <constraint firstItem="dRi-B0-VP3" firstAttribute="leading" secondItem="IMA-98-C8g" secondAttribute="leading" constant="20" id="A78-Ip-ABn"/>
                                     <constraint firstAttribute="trailing" secondItem="g37-WK-ev5" secondAttribute="trailing" constant="20" id="Oid-Sj-Fl1"/>
-                                    <constraint firstItem="Xrs-g9-OWw" firstAttribute="leading" secondItem="IMA-98-C8g" secondAttribute="leading" constant="20" id="did-Ks-oEa"/>
+                                    <constraint firstItem="g37-WK-ev5" firstAttribute="leading" secondItem="IMA-98-C8g" secondAttribute="leading" constant="20" id="g2i-mp-g2t"/>
+                                    <constraint firstItem="dRi-B0-VP3" firstAttribute="top" secondItem="g37-WK-ev5" secondAttribute="bottom" constant="20" id="hGQ-Og-b4y"/>
+                                    <constraint firstAttribute="trailing" secondItem="dRi-B0-VP3" secondAttribute="trailing" constant="20" id="hXj-1j-63q"/>
+                                    <constraint firstItem="g37-WK-ev5" firstAttribute="top" secondItem="IMA-98-C8g" secondAttribute="top" constant="20" id="hlW-dp-zeb"/>
                                     <constraint firstAttribute="height" constant="200" id="kGd-x5-Mha"/>
-                                    <constraint firstItem="Xrs-g9-OWw" firstAttribute="top" secondItem="g37-WK-ev5" secondAttribute="bottom" constant="82" id="rtI-dm-8B3"/>
+                                    <constraint firstAttribute="trailing" secondItem="g37-WK-ev5" secondAttribute="trailing" constant="20" id="ovH-9J-F0g"/>
+                                    <constraint firstAttribute="bottom" secondItem="dRi-B0-VP3" secondAttribute="bottom" constant="20" id="rkS-Rb-aXF"/>
                                     <constraint firstItem="g37-WK-ev5" firstAttribute="leading" secondItem="IMA-98-C8g" secondAttribute="leading" constant="20" id="yDk-Ru-FSC"/>
-                                    <constraint firstItem="Xrs-g9-OWw" firstAttribute="top" secondItem="g37-WK-ev5" secondAttribute="bottom" constant="20" id="zua-IV-YbU"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXd-ny-bv4">
-                                <rect key="frame" x="155" y="347" width="83" height="35"/>
+                                <rect key="frame" x="152" y="361" width="89" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="명언생성"/>
+                                <buttonConfiguration key="configuration" style="plain" title="명언 생성"/>
                                 <connections>
-                                    <action selector="tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hev-6F-f3n"/>
-                                    <action selector="tapQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="khU-pv-8zw"/>
+                                    <action selector="tapQuoteGeneratorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sex-gs-Xlo"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="LXd-ny-bv4" firstAttribute="trailing" secondItem="IMA-98-C8g" secondAttribute="trailing" id="2vZ-aa-By6"/>
                             <constraint firstItem="fxD-4h-srk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="4C5-cG-RNS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fxD-4h-srk" secondAttribute="trailing" constant="24" id="4uv-Dx-pLZ"/>
+                            <constraint firstItem="LXd-ny-bv4" firstAttribute="top" secondItem="IMA-98-C8g" secondAttribute="bottom" constant="20" id="6PK-do-0yq"/>
+                            <constraint firstItem="LXd-ny-bv4" firstAttribute="trailing" secondItem="IMA-98-C8g" secondAttribute="trailing" id="C1D-p6-01w"/>
+                            <constraint firstItem="LXd-ny-bv4" firstAttribute="top" secondItem="IMA-98-C8g" secondAttribute="bottom" constant="20" id="FZ0-uX-wTa"/>
                             <constraint firstItem="IMA-98-C8g" firstAttribute="top" secondItem="fxD-4h-srk" secondAttribute="bottom" constant="24" id="Han-fh-zcp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IMA-98-C8g" secondAttribute="trailing" constant="24" id="Ir8-Xh-C9R"/>
                             <constraint firstItem="IMA-98-C8g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Sp9-9D-L4x"/>
+                            <constraint firstItem="LXd-ny-bv4" firstAttribute="centerX" secondItem="IMA-98-C8g" secondAttribute="centerX" id="XZD-Lb-pHp"/>
                             <constraint firstItem="LXd-ny-bv4" firstAttribute="top" secondItem="IMA-98-C8g" secondAttribute="bottom" constant="30" id="c8n-tq-BSU"/>
                             <constraint firstItem="LXd-ny-bv4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hrh-PW-Tr9"/>
                             <constraint firstItem="fxD-4h-srk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="n4R-je-lfY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LXd-ny-bv4" secondAttribute="trailing" constant="170" id="uXi-5e-T2Q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="dRi-B0-VP3" id="t2F-rv-1YK"/>
+                        <outlet property="quoteLabel" destination="g37-WK-ev5" id="sNZ-EY-Vrj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117" y="4"/>
+            <point key="canvasLocation" x="116.79389312977099" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

@@ -8,9 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var quoteLabel: UILabel!
-    
     let quotes = [
         Quote(contents: "죽음을 두려워하는 나머지 삶을 시작조차 못하는 사람이 많다.", name: "벤다이크"),
         Quote(contents: "나는 나 자신을 빼 놓고는 모두 안다.", name: "비용"),
@@ -23,9 +23,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func tap(_ sender: Any) {
-        let random = Int(arc4random_uniform(5)) // 0~4 사이의 난수를
+    
+    @IBAction func tapQuoteGeneratorButton(_ sender: Any) {
+        let random = Int(arc4random_uniform(5))
         let quote = quotes[random]
         self.quoteLabel.text = quote.contents
         self.nameLabel.text = quote.name
