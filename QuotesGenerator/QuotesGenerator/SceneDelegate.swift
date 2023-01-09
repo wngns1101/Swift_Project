@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  ExampleProject
+//  QuotesGenerator
 //
-//  Created by juhoon lee on 2023/01/07.
+//  Created by juhoon lee on 2023/01/09.
 //
 
 import UIKit
