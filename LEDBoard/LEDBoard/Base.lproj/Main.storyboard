@@ -39,6 +39,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="contentsLabel" destination="pQv-lB-isP" id="0Od-J1-M8I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,8 +170,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6w7-76-9iz">
-                                <rect key="frame" x="229" y="471" width="53.666666666666657" height="34.333333333333314"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6w7-76-9iz">
+                                <rect key="frame" x="169.66666666666666" y="473.33333333333331" width="53.666666666666657" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="저장"/>
                                 <connections>
@@ -194,6 +197,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="설정" id="TAx-eN-GZB"/>
+                    <connections>
+                        <outlet property="blackButton" destination="LFQ-Zj-Sw9" id="e4H-Mu-3ru"/>
+                        <outlet property="blueButton" destination="OFW-tl-Jyr" id="atB-Xw-Hkx"/>
+                        <outlet property="greenButton" destination="sJw-uP-Cez" id="9Xl-CX-G8f"/>
+                        <outlet property="orangeButton" destination="STN-Ax-17A" id="qm3-h6-8cY"/>
+                        <outlet property="purpleButton" destination="tfP-N4-eTt" id="Kp1-r8-hiO"/>
+                        <outlet property="textField" destination="b80-fh-Ydd" id="fsW-oM-MtZ"/>
+                        <outlet property="yellowButton" destination="Eqv-wP-cR3" id="3qh-6a-ZYd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnx-6U-dX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
