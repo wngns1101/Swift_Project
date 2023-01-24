@@ -60,7 +60,7 @@ class WriteDiaryViewController: UIViewController {
     
     @objc private func datePickerValueDidChange(_ datePicker: UIDatePicker){
         let formmater = DateFormatter()
-        formmater.dateFormat = "yyyy 년 MM월 dd일(EEEEE)"
+        formmater.dateFormat = "yyyy년 MM월 dd일(EEEEE)"
         formmater.locale = Locale(identifier: "ko_KR")
         self.diaryDate = datePicker.date
         self.dateTextField.text = formmater.string(from: datePicker.date)
