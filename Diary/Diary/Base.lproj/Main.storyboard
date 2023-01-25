@@ -110,7 +110,7 @@
         <!--일기 작성-->
         <scene sceneID="Bwu-rE-fgG">
             <objects>
-                <viewController id="N1O-eh-bwB" customClass="WriteDiaryViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WriteDiaryViewController" id="N1O-eh-bwB" customClass="WriteDiaryViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yvV-r6-cO5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,7 +198,7 @@
         <!--Diary Detail View Controller-->
         <scene sceneID="aMt-RE-tuS">
             <objects>
-                <viewController id="Zes-Jk-JnT" customClass="DiaryDetailViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiaryDetailViewController" id="Zes-Jk-JnT" customClass="DiaryDetailViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cU9-PZ-bKx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,6 +260,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="53.666666666666664" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="수정"/>
+                                        <connections>
+                                            <action selector="tapEditButton:" destination="Zes-Jk-JnT" eventType="touchUpInside" id="NkS-Yc-twT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZA-LM-nMR">
                                         <rect key="frame" x="103.66666666666667" y="0.0" width="53.666666666666671" height="34.333333333333336"/>
@@ -267,6 +270,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="삭제">
                                             <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapDeleteButton:" destination="Zes-Jk-JnT" eventType="touchUpInside" id="YPE-cP-HoX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -290,6 +296,11 @@
                             <constraint firstItem="yMF-IP-9If" firstAttribute="top" secondItem="YiM-Cy-FRo" secondAttribute="bottom" constant="24" id="pSc-sj-XiK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentsTextView" destination="kWI-iF-xqz" id="h9s-Dn-yL2"/>
+                        <outlet property="dateLabel" destination="QrI-X3-NJW" id="O1L-2w-i9W"/>
+                        <outlet property="titleLabel" destination="ckm-1H-wOq" id="5hh-LQ-hGP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad9-dz-gS3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
