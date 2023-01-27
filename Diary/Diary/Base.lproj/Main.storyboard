@@ -373,6 +373,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="80"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="Fnc-W9-wnb" id="MB5-ve-B7j"/>
+                                            <outlet property="titleLabel" destination="CLP-TO-KkK" id="aRx-bW-FVC"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -387,10 +391,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m5b-yf-hlb"/>
+                    <connections>
+                        <outlet property="collectionView" destination="1zr-lH-eJY" id="HZl-Gx-f4s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eS3-Ex-hHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="675"/>
+            <point key="canvasLocation" x="940" y="665"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eyd-mp-iTM">
@@ -403,7 +410,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="27z-o8-qRE" kind="relationship" relationship="viewControllers" id="eAY-Ae-NDn"/>
-                        <segue destination="PLG-AO-jdQ" kind="relationship" relationship="viewControllers" id="uvj-US-hln"/>
+                        <segue destination="PLG-AO-jdQ" kind="relationship" relationship="viewControllers" id="lah-Ou-Cy5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7j-l4-oFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
