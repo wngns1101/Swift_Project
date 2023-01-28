@@ -22,20 +22,20 @@
                                     <constraint firstAttribute="height" constant="100" id="JT3-fP-lNu"/>
                                 </constraints>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIf-lo-vTh">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIf-lo-vTh">
                                 <rect key="frame" x="24" y="263" width="345" height="60"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kbr-l3-JZd">
+                            <progressView opaque="NO" alpha="0.0" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kbr-l3-JZd">
                                 <rect key="frame" x="48" y="353" width="297" height="4"/>
                             </progressView>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yet-yR-h62">
                                 <rect key="frame" x="0.0" y="298" width="393" height="34"/>
                             </datePicker>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="5Ed-EA-C0s">
-                                <rect key="frame" x="24" y="431" width="345" height="34.333333333333314"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="5Ed-EA-C0s">
+                                <rect key="frame" x="24" y="441" width="345" height="34.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aeb-la-OGb">
                                         <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="34.333333333333336"/>
@@ -60,10 +60,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nIf-lo-vTh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="3dW-4U-dsP"/>
+                            <constraint firstItem="5Ed-EA-C0s" firstAttribute="top" secondItem="Kbr-l3-JZd" secondAttribute="bottom" constant="84" id="4Hs-a6-tpe"/>
                             <constraint firstAttribute="trailing" secondItem="Yet-yR-h62" secondAttribute="trailing" id="5Zi-fe-lGN"/>
                             <constraint firstItem="Yet-yR-h62" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G1L-Ux-mwf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nIf-lo-vTh" secondAttribute="trailing" constant="24" id="H1O-tt-GrV"/>
-                            <constraint firstItem="5Ed-EA-C0s" firstAttribute="top" secondItem="Kbr-l3-JZd" secondAttribute="bottom" constant="24" id="Y91-z6-ArH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Ed-EA-C0s" secondAttribute="trailing" constant="24" id="YHM-p3-BmF"/>
                             <constraint firstItem="Yet-yR-h62" firstAttribute="top" secondItem="mWp-6a-hhr" secondAttribute="bottom" constant="30" id="drn-nx-gBE"/>
                             <constraint firstItem="nIf-lo-vTh" firstAttribute="top" secondItem="mWp-6a-hhr" secondAttribute="bottom" constant="80" id="iEL-1r-s4z"/>
@@ -78,6 +78,7 @@
                     <connections>
                         <outlet property="cancelButton" destination="Aeb-la-OGb" id="moB-uZ-YRC"/>
                         <outlet property="datePicker" destination="Yet-yR-h62" id="noM-L6-bOp"/>
+                        <outlet property="imageView" destination="mWp-6a-hhr" id="BiS-eW-vLp"/>
                         <outlet property="progressView" destination="Kbr-l3-JZd" id="Uts-rz-V2Q"/>
                         <outlet property="timerLabel" destination="nIf-lo-vTh" id="ty6-8b-9dq"/>
                         <outlet property="toggleButton" destination="Rek-Xh-k16" id="NV2-8T-QTb"/>
