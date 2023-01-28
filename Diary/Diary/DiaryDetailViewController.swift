@@ -9,7 +9,6 @@ import UIKit
 
 protocol DiaryDetailViewDelegate: AnyObject{
     func didSelectDelete(indexPath: IndexPath)
-    func didSelectStar(inexPath: IndexPath, isStar: Bool)
 }
 
 class DiaryDetailViewController: UIViewController {
@@ -78,7 +77,13 @@ class DiaryDetailViewController: UIViewController {
             self.starButton?.image = UIImage(systemName: "star.fill")
         }
         self.diary?.isStar = !isStar
-        self.delegate?.didSelectStar(inexPath: indexPath, isStar: self.diary?.isStar ?? false)
+        NotificationCenter.default.post(name: NSNotification.Name("starDiary"),
+        object: [
+            "isStar": self.diary?.isStar ?? false,
+            "indexPath": indexPath
+        ],
+        userInfo: nil)
+//        self.delegate?.didSelectStar(inexPath: indexPath, isStar: self.diary?.isStar ?? false)
     }
     
     deinit{
