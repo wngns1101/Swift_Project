@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var appleLoginButton: UIButton!
-    @IBOutlet weak var googleLoginButton: UIButton!
+    @IBOutlet weak var googleLoginButton: GIDSignInButton!
     @IBOutlet weak var emailLoginButton: UIButton!
     
     // 뷰 컨트롤러가 생성될 때 한 번만 호출
@@ -28,11 +29,14 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // 로그인 화면은 첫 화면이기 때문에 화면에서 네비게이션 바가 안 보이게 설정함
         navigationController?.navigationBar.isHidden = true
+        
+        //Google Sign In
+        GIDSignIn.sharedInstance().presentingViewController = self
     }
     
     
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
-        // firebase 인증
+        GIDSignIn.sharedInstance().signIn()
     }
     
     @IBAction func appleLoginButtonTapped(_ sender: UIButton) {
